@@ -1,3 +1,5 @@
+
+let  t0 = performance.now();
 const median = function(nums1, nums2) {
   if (nums1.length !== 0 && nums2.length !== 0) {
     for (let i = 0; i < nums1.length; i++) {
