@@ -2,7 +2,7 @@ let maxSubArray = function(nums) {
   let output = nums[0];
 
   for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j <= nums.length; j++) {
+    for (let j = nums.length; j > i; j--) {
       output = Math.max(
         nums.slice(i, j).reduce((a, b) => a + b),
         output
@@ -12,3 +12,4 @@ let maxSubArray = function(nums) {
   return output;
 };
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
